@@ -143,7 +143,7 @@ p{
 }
 .tarjeta-image{
     padding: 2em;
-    background-image: url(/Paginas_Ejemplos/Despacho_1/image/Fondo_3.webp);
+    background-image: url(./image/Fondo_3.webp);
     background-size: cover;
     background-position: center;
 }
@@ -172,7 +172,7 @@ p{
 .penal-image{
     width: 100%;
     height: 100%;
-    background-image: url(/Paginas_Ejemplos/Despacho_1/image/Derecho_Pen.webp);
+    background-image: url(./image/Derecho_Pen.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@ p{
 .civil-image{
     width: 100%;
     height: 100%;
-    background-image: url(/Paginas_Ejemplos/Despacho_1/image/Derecho_Civil.webp);
+    background-image: url(./image/Derecho_Civil.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -222,7 +222,7 @@ p{
 .adm-image{
     width: 100%;
     height: 100%;
-    background-image: url(/Paginas_Ejemplos/Despacho_1/image/Derecho_Adm.webp);
+    background-image: url(./image/Derecho_Adm.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
