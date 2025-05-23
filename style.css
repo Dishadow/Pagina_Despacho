@@ -30,6 +30,38 @@
   --font-subtitle:"Julius Sans One", sans-serif;
   --font-subtitle-sub: "Jura", sans-serif;
 }
+/* ANIMACIONES */
+@keyframes inicio {
+    from{
+        transform: translateY(-50%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@keyframes fondos {
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+@keyframes glowEffect {
+    0% { filter: brightness(100%); }
+    50% { filter: brightness(110%); }
+    100% { filter: brightness(100%); }
+}
 body{
     padding: 0;
     margin: 0;
@@ -52,6 +84,7 @@ p{
     backdrop-filter: blur(5px);
     font-family: var(--font-body);
     z-index: 13;
+    animation: inicio 0.5s ease-in-out;
 }
 .nav_izq{
     display: flex;
@@ -93,6 +126,10 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fondos 0.3s ease-in-out;
+}
+.image-container{
+    
 }
 .hero-title{
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -103,6 +140,7 @@ p{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 40px;
+    animation: fondos 0.8s ease-out;
 }
 .frase-container{
     font-size: 0.8em;
@@ -117,7 +155,9 @@ p{
     background-position: center;
     display: flex 1;
     justify-items: center;
+    animation: fondos 0.3s ease-in-out;
 }
+
 .area-image{
     width: 100%;
     display: flex 1;
@@ -128,6 +168,7 @@ p{
     text-align: center;
     justify-content: center;
     justify-items: center;
+    
 }
 .subtitle{
     font-size: 3em;
@@ -150,105 +191,84 @@ p{
     text-align: center;
     font-size: 1.5em;
 }
-.tarjeta-image{
-    padding: 2em 8em 2em 8em;
-    background-image: url(./image/Fondo_3.webp);
-    background-size: cover;
-    background-position: center;
+.tarjeta-image {
+  padding: 2em 8em;
+  background-image: url(./image/Fondo_3.webp);
+  background-size: cover;
+  background-position: center;
+  animation: parallax 4s linear infinite alternate;
+  animation: glowEffect 3s infinite alternate;
 }
 
-.tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 2em;
-    justify-items: center;
-    justify-content: center;
-    height: 16em;
-    color: white;
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2em;
+  justify-content: center;
+  color: white;
 }
-/* Tarjeta de Derecho penal */
-.derecho_penal{
-    background-color: rgba(0, 0, 0, 0.377);
-    flex: 1 1 250px;
-    max-width: 100%;
-    max-height: 250px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.342);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 2em;
+
+/* Estilos comunes para todas las tarjetas */
+.tarjeta {
+  flex: 1 1 auto;
+  min-width: 200px;
+  max-width: 350px;
+  min-height: 200px;
+  border-radius: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
-.derecho_penal:hover{
-    transform:scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-.penal-image{
-    width: 100%;
-    height: 100%;
-    background-image: url(./image/Derecho_Pen.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2em;
+
+/* Colores */
+.derecho_penal { background-color: rgba(0, 0, 0, 0.38); }
+.derecho_civil,
+.derecho_administrativo { background-color: white; }
+
+/* Estilos para las tarjetas */
+.tarjeta-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* Tarjeta de Derecho Civil */
-.derecho_civil{
-    background-color: white;
-    flex: 1 1 250px;
-    max-width: 100%;
-    max-height: 250px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 2em;
+.tarjeta-texto {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1em;
+  padding: 1em;
+  color: white;
+  backdrop-filter: blur(4px);
 }
-.derecho_civil:hover{
-    transform:scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
+
+.tarjeta-texto h3 {
+  margin: 0.2em 0;
+  font-size: 1.4em;
 }
-.civil-image{
-    width: 100%;
-    height: 100%;
-    background-image: url(./image/Derecho_Civil.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2em;
+
+.tarjeta-texto p {
+  font-size: 0.9em;
+  margin: 0;
 }
-/* Tarjeta de Derecho Administrativo */
-.derecho_administrativo{
-    background-color: white;
-    flex: 1 1 250px;
-    max-width: 100%;
-    max-height: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 2em;
-}
-.derecho_administrativo:hover{
-    transform:scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
-}
-.adm-image{
-    width: 100%;
-    height: 100%;
-    background-image: url(./image/Derecho_Adm.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2em;
-}
+
+/* Fondos para las tarjetas */
+.penal-image     { background-image: url(./image/Derecho_Pen.webp); }
+.civil-image     { background-image: url(./image/Derecho_Civil.webp); }
+.adm-image       { background-image: url(./image/Derecho_Adm.webp); }
+
 /* Apartado Quienes Somos */
 .quienes_somos-container{
     width: 100%;
-    padding: 10em 0 0 0 ;
+    padding: 12em 0 0 0 ;
     position: relative;
 }
 .qs-image{
@@ -261,6 +281,14 @@ p{
     bottom: -5em;
     width: 660px;
     z-index: 10;
+}
+.tarjetas,.formulario-contacto,
+.quienes_somos-container{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
 }
 .qs-header{
     position: relative;
@@ -319,8 +347,9 @@ p{
     padding: 5em 10em 2em 10em;
     background: #00385B;
     background: linear-gradient(190deg,rgba(0, 56, 91, 1) 0%, rgba(0, 19, 44, 1) 100%);
-    border-radius: 12px;
+    border-radius: 16px;
     font-family: var(--font-body);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 .formulario-contacto h2 {
     font-family: var(--font-subtitle);
@@ -331,6 +360,7 @@ p{
 }
 
 .formulario-contacto p {
+    color:#cccccc;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -344,17 +374,29 @@ p{
 .campo label {
   margin-bottom: 0.5em;
   color: #ffffff;
+  font-weight: 600;
 }
 
 .campo input,
 .campo select,
 .campo textarea {
-  padding: 0.8em;
-  border: 1px solid #ffffff;
-  border-radius: 8px;
-  font-size: 1em;
+    padding: 0.8em;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgb(255, 255, 255);
+    outline: none;
+    transition: border 0.3s ease;
 }
-
+.campo select option{
+    color: #0A111D;
+}
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--primary);
+}
 button[type="submit"] {
   background-color: var(--primary);
   color: white;
@@ -363,6 +405,7 @@ button[type="submit"] {
   border-radius: 8px;
   font-size: 1em;
   cursor: pointer;
+  width: 100%;
   transition: background 0.3s ease;
 }
 
@@ -383,11 +426,11 @@ button[type="submit"]:hover {
     }
    .quienes_somos-container{
         width: 100%;
-        padding: 16em 0 0 0 ;
+        padding: 9em 0 0 0 ;
         position: relative;
     }
     .qs-header>.subtitle{
-        font-size: 1em;
+        font-size: 2em;
     }
     .tarjeta-image{
         padding: 2em 2em 2em 2em;
@@ -402,6 +445,20 @@ button[type="submit"]:hover {
         width: 400px;
         z-index: 10;
     }
+        .form-cont {
+        padding: 2em 1.5em;
+        max-width: 60%;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 0.95em;
+    }
+
+    button[type="submit"] {
+        font-size: 0.95em;
+    }
 }
 
 /* Móvil (pantallas pequeñas) */
@@ -410,15 +467,6 @@ button[type="submit"]:hover {
         padding: 0.6em 0.6em;
         font-size: 0.7em;
    }
-    /* .derecho_penal{
-        flex: 1 1 400px;
-    }
-    .derecho_civil{
-        flex: 1 1 400px;
-    }
-    .derecho_administrativo{
-        flex: 1 1 400px;
-    } */
     .quienes_somos-container{
         width: 100%;
         padding: 1em 0 0 0 ;
@@ -442,8 +490,13 @@ button[type="submit"]:hover {
         justify-items: center;
     }
     .qs-header>.subtitle-sub{
-        font-size: 0.65em;
+        transform: translateX(-50%);
+        font-size: 0.7em;
         text-align: justify;
+    }
+    .qs-header>.subtitle{
+        font-size: 1em;
+        transform: translateX(-50%);
     }
     .tarjeta-image{
         padding: 1.5em 1.5em 1.5em 1.5em;
@@ -451,9 +504,15 @@ button[type="submit"]:hover {
         background-size:calc(100% * 2);
         background-position: center;
     }
+    .form-cont {
+        padding: 2em 1.5em;
+        max-width: 80%;
+    }
+
 }
 /* Footer */
 footer {
+    width: 100%;
     background: var(--azul);
     color: white;
     padding: 60px 0 30px;

@@ -12,15 +12,15 @@
             <a href="/index.html"><p style="color: #0066FF;">DISITE</p><p style="color: white;">-XPERT</p></a>
         </div>
         <div class="nav_der">
-            <a href="">Inicio</a>
-            <a href="">Quienes somos</a>
-            <a href="">Contacto</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#Quienes_Somos">Quienes somos</a>
+            <a href="#Contactanos">Contacto</a>
         </div>
     </nav>
     <section class="hero-content">
         <div class="image-container">
-            <div class="hero-title">
-                <div class="frase-container">
+            <div class="hero-title" id="inicio">
+                <div class="frase-container" >
                     <p>"La justicia no es un ideal lejano es el resultado del esfuerzo diario de quienes lucchan por ella. Sigue adelante. porque tu voz puede cambiar destinos”"</p>
                 </div>
             </div>
@@ -34,30 +34,40 @@
                 <p class="subtitle-sub">Nos especializamos en las siguientes areas</p>
             </div>
             <div class="tarjetas-container">
-                <div class="tarjeta-image">
-                    <div class="tarjetas">
-                        <div class="derecho_penal">
-                            <div class="penal-image">
-                                <p>Derecho Penal</p>
-                                <p>saber mas</p>
-                            </div>
-                        </div>
-                        <div class="derecho_civil">
-                            <div class="civil-image">
-                                <p>Derecho Civil</p>
-                                <p>saber mas</p>
-                            </div>
-                        </div>
-                        <div class="derecho_administrativo">
-                            <div class="adm-image">
-                                <p>Derecho Administrativo</p>
-                                <p>saber mas</p>
-                            </div>
-                        </div>
+            <div class="tarjeta-image">
+                <div class="tarjetas">
+                
+                <div class="tarjeta derecho_penal">
+                    <div class="tarjeta-bg penal-image">
+                    <div class="tarjeta-texto">
+                        <h3>Derecho Penal</h3>
+                        <p>Saber más</p>
+                    </div>
                     </div>
                 </div>
+
+                <div class="tarjeta derecho_civil">
+                    <div class="tarjeta-bg civil-image">
+                    <div class="tarjeta-texto">
+                        <h3>Derecho Civil</h3>
+                        <p>Saber más</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="tarjeta derecho_administrativo">
+                    <div class="tarjeta-bg adm-image">
+                    <div class="tarjeta-texto">
+                        <h3>Derecho Administrativo</h3>
+                        <p>Saber más</p>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
             </div>
-            <div class="quienes_somos-container">
+            </div>
+            <div class="quienes_somos-container" id="Quienes_Somos" >
                 <div class="qs-image">
                     <img class="qs-overlay" src="./image/abogado.webp" alt="Imagen de abogado de oro">
                     <div class="qs-header">
@@ -67,48 +77,49 @@
                 </div>
             </div>
         </div>
-        <section class="formulario-contacto">
+        <section class="formulario-contacto" id="Contactanos">
             <h2>Solicita Información Legal</h2>
             <p>Completa el siguiente formulario y un abogado se pondrá en contacto contigo.</p>
+
             <div class="form-cont">
-            <form action="" method="POST">
+                <form action="" method="POST">
+                
                 <div class="campo">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Ana Martínez">
                 </div>
 
                 <div class="campo">
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo" required placeholder="Email" >
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required placeholder="Ej: ana@email.com">
                 </div>
 
                 <div class="campo">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: +52 55 1234 5678">
                 </div>
 
                 <div class="campo">
-                <label for="tipo-caso">Tipo de caso</label>
-                <select id="tipo-caso" name="tipo-caso" required>
+                    <label for="tipo-caso">Tipo de caso</label>
+                    <select id="tipo-caso" name="tipo-caso" required>
                     <option value="">Seleccione una opción</option>
                     <option value="penal">Derecho Penal</option>
                     <option value="civil">Derecho Civil</option>
                     <option value="administrativo">Derecho Administrativo</option>
                     <option value="otros">Otros</option>
-                </select>
+                    </select>
                 </div>
 
                 <div class="campo">
-                <label for="mensaje">Resumen del caso</label>
-                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa brevemente su situación..." required></textarea>
+                    <label for="mensaje">Resumen del caso</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describa brevemente su situación..." required></textarea>
                 </div>
 
                 <button type="submit">Enviar solicitud</button>
-            </form>
+                </form>
             </div>
-
             </section>
-    </section>
+
     <footer>
         <div class="footer-contenedor">
             <div class="footer-logo fade-in"><a href=""><h1 style="color: #0066ff;">DISITE</h1><h1 style="color:#ffffff;">-XPERT</h1></a></div>
