@@ -279,7 +279,10 @@ p{
     width: 660px;
     z-index: 10;
 }
-.tarjetas,.formulario-contacto,
+.derecho_penal,
+.derecho_civil,
+.derecho_administrativo,
+.formulario-contacto,
 .quienes_somos-container{
     view-timeline-name: --image;
     view-timeline-axis: block;
