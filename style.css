@@ -128,9 +128,6 @@ p{
     justify-content: center;
     animation: fondos 0.3s ease-in-out;
 }
-.image-container{
-    
-}
 .hero-title{
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     width: 70%;
@@ -288,7 +285,8 @@ p{
     view-timeline-axis: block;
     animation-timeline: --image;
     animation-name: show;
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
 }
 .qs-header{
     position: relative;
