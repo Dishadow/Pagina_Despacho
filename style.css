@@ -259,7 +259,6 @@ p {
     height: 50em;
     background-image: url(./image/Fonod_4_1.webp);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -320,7 +319,7 @@ p {
 .areas-container {
     width: 100%;
     background-image: url(./image/Fondo_2.webp);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     display: flex 1;
     justify-items: center;

@@ -142,11 +142,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Efecto parallax en el hero
-    const imageContainer = document.querySelector('.image-container');
-    if (imageContainer) {
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
+const imageContainer = document.querySelector('.image-container');
+let initialBackgroundPositionY = 0;
+if (imageContainer) {
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        // Establecer el valor inicial de backgroundPositionY
+        if (scrollPosition === 0) {
+            imageContainer.style.backgroundPositionY = '0px';
+            initialBackgroundPositionY = 0;
+        } else {
             imageContainer.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-        });
+            initialBackgroundPositionY = scrollPosition * 0.5;
+        }
+    });
     }
 });
