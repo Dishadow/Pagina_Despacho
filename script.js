@@ -152,8 +152,8 @@ if (imageContainer) {
             imageContainer.style.backgroundPositionY = '0px';
             initialBackgroundPositionY = 0;
         } else {
-            imageContainer.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-            initialBackgroundPositionY = scrollPosition * 0.5;
+            imageContainer.style.backgroundPositionY = scrollPosition * 0.3 + 'px';
+            initialBackgroundPositionY = scrollPosition * 0;
         }
     });
     }
@@ -170,7 +170,7 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.35
 });
 
-document.querySelectorAll('.tarjetas, .formulario-contacto, .quienes_somos-container, .testimonios-container')
+document.querySelectorAll('.derecho_penal, .derecho_civil, .derecho_administrativo, .formulario-contacto, .quienes_somos-container, .testimonios-container')
   .forEach(el => {
     el.classList.add('animate-on-scroll');
     observer.observe(el);

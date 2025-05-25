@@ -322,6 +322,7 @@ p {
     background-size: auto;
     background-position: center;
     display: flex 1;
+    justify-content: center;
     justify-items: center;
 }
 
