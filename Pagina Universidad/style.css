@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+/* Barra de navegación */
+nav{
+  display: flex;
+  position: fixed;
+  background-color: rgba(34, 34, 34, 0.2)000;
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  align-items: center;
+  z-index: 2;
+}
+.nav-izq{
+  width: 100%;
+  padding-left:2em;
+}
+.nav-der{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+    padding-right: 2em;
+}
+.nav-izq>a{
+  text-decoration: none;
+  color: white;
+}
+.nav-der > a{
+  text-decoration: none;
+  color: white;
+  gap: 10em;
+}
+.nav-der>a:hover{
+  color: rgb(0, 132, 255);
+}
+.conteiner{
+  background: linear-gradient(rgb(255, 255, 255), rgb(197, 197, 197));
+  height: 70em;
+}
+@keyframes Fondo{
+    from{opacity: 1; transform: scalex(0);}
+    to{opacity: 1; transform: scalex(1);}
+}
+.Conteiner-Registro{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Images/Fondo_2.webp");
+  background-size: cover;
+  /* animation: Fondo 0.5s; */
+}
+@keyframes entrar{
+    from{opacity: 0; transform: scale(0);}
+    to{opacity: 1; transform: scale(1);}
+}
+.Reg-h2{
+  color: white;
+}
+.registo{
+    border-radius: 1em;
+    display: flex 1;
+    justify-items: center;
+    background-color: #000000af;
+    backdrop-filter: blur(5px);
+    width: 50%;
+    padding: 2em;
+    align-items: end;
+    color: rgb(0, 0, 0);
+    box-shadow:5px 5px 20px rgba(0, 0, 0, 0.678);
+    animation: entrar 0.5s;
+}
+input {
+  all: unset;
+}
+
+.input-nombre{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.inp-registro{
+    width: 100%;
+    height: 2em;
+}
+/* Boton de registo */
+.btn {
+  transition: all 0.3s ease-in-out;
+  font-family: "Dosis", sans-serif;
+}
+
+.btn {
+  width: 7em;
+  height: 2em;
+  border-radius: 5em;
+  background-image: linear-gradient(135deg, #00ff95 0%, #0059ff 100%);
+  box-shadow: 0 20px 30px -6px rgba(0, 183, 255, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+.decorated{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.decorated::before,
+.decorated::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px;
+}
+
+/* Inputs */ 
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.2em;
+  min-width: 5px;
+  color: #fff;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+/*Apartado del footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Desplazamiento inicial */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 50emd;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
