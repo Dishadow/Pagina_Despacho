@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal One Air | Experiencias de Lujo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1>Royal One Air</h1>
+            <p>Descubre los destinos más exclusivos del mundo con nuestro servicio personalizado de viajes de lujo. Donde tus sueños se convierten en realidad.</p>
+            <a href="#destinations " class="btn">Explora Ahora</a>
+        </div>
+        
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- Destinos Section -->
+    <section class="destinations" id="destinations">
+        <h2 class="section-title">Nuestros Destinos Exclusivos</h2>
+        <div class="destinations-grid">
+            <!-- Destino 1 -->
+            <div class="destination-card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-back">
+                        <h3>Maldivas</h3>
+                        <p>Villas sobre el agua con piscinas infinitas y acceso directo al océano. Experiencia de lujo en el paraíso.</p>
+                        <div class="price">Desde €5,200/noche</div>
+                        <a href="#" class="btn" style="margin-top: 1rem;">Reservar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Destino 2 -->
+            <div class="destination-card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-back">
+                        <h3>Santorini</h3>
+                        <p>Cuevas de lujo con vistas al mar Egeo y puestas de sol inolvidables. Elegancia y romance en Grecia.</p>
+                        <div class="price">Desde €3,800/noche</div>
+                        <a href="#" class="btn" style="margin-top: 1rem;">Reservar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Destino 3 -->
+            <div class="destination-card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-back">
+                        <h3>París</h3>
+                        <p>Suites con vista a la Torre Eiffel en los hoteles más exclusivos de la Ciudad de la Luz.</p>
+                        <div class="price">Desde €4,500/noche</div>
+                        <a href="#" class="btn" style="margin-top: 1rem;">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Servicios Section -->
+    <section class="services">
+        <h2 class="section-title">Nuestros Servicios Premium</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <h3>Concierge 24/7</h3>
+                <p>Servicio de conserjería disponible las 24 horas para satisfacer todas tus necesidades durante tu viaje.</p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-jet-fighter"></i>
+                </div>
+                <h3>Vuelos Privados</h3>
+                <p>Acceso a nuestra flota de jets privados para viajar con la máxima comodidad y privacidad.</p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Experiencias Gastronómicas</h3>
+                <p>Cenas privadas con chefs estrella Michelin en locaciones exclusivas.</p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Wellness & Spa</h3>
+                <p>Tratamientos personalizados con los mejores terapeutas en resorts de lujo.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonios Section -->
+    <section class="testimonials">
+        <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+        <div class="testimonial-slider" id="testimonialSlider">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Royal One Air superó todas mis expectativas. Desde el jet privado hasta la villa en Maldivas, cada detalle fue perfecto. Nunca había experimentado un servicio tan personalizado y de alta calidad."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente satisfecho" class="author-img">
+                        <div class="author-info">
+                            <h4>María Rodríguez</h4>
+                            <p>CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Como viajero frecuente, puedo decir que Royal One Air es simplemente lo mejor. Su atención al detalle y su red de contactos exclusivos hacen que cada viaje sea una experiencia única."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente satisfecho" class="author-img">
+                        <div class="author-info">
+                            <h4>Carlos Méndez</h4>
+                            <p>Inversionista</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Organizaron nuestra luna de miel y fue mágico. Desde la suite con vista a la Torre Eiffel hasta la cena privada en un viñedo en Toscana, todo fue perfecto. ¡Gracias por hacer nuestros sueños realidad!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente satisfecho" class="author-img">
+                        <div class="author-info">
+                            <h4>Ana y Javier López</h4>
+                            <p>Recién Casados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <span class="slider-dot active" data-index="0"></span>
+            <span class="slider-dot" data-index="1"></span>
+            <span class="slider-dot" data-index="2"></span>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Royal One Air</h3>
+                <p>Creando experiencias de viaje inolvidables desde 2005. Especialistas en destinos exclusivos y servicios de alto nivel.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#">Inicio</a>
+                <a href="#">Destinos</a>
+                <a href="#">Servicios</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Avenida del Lujo 123, Madrid</p>
+                <p><i class="fas fa-phone"></i> +34 910 123 456</p>
+                <p><i class="fas fa-envelope"></i> info@RoyalOneAir.com</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Royal One Air. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
