@@ -382,8 +382,6 @@ p {
     background-image: url(./image/Fondo_3.webp);
     background-size: cover;
     background-position: center;
-    animation: parallax 4s linear infinite alternate;
-    animation: glowEffect 3s infinite alternate;
 }
 
 .tarjetas {
@@ -577,18 +575,6 @@ p {
     margin: 5em 0 0 0;
     position: relative;
     overflow: hidden;
-}
-
-.formulario-contacto::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-    animation: spin 20s linear infinite;
-    z-index: 0;
 }
 
 .form-cont {
@@ -1087,16 +1073,26 @@ footer::before {
 }
 
 /* Animaciones */
-.derecho_penal,
-.derecho_civil,
-.derecho_administrativo,
-.formulario-contacto,
-.quienes_somos-container,
-.testimonios-container {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: show;
-    animation-range: entry 10% cover 25%;
-    animation-fill-mode: both;
+/* Animación base */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* Clase que se agrega cuando el elemento es visible */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  animation: show 0.8s forwards;
+}
+

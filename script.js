@@ -158,3 +158,21 @@ if (imageContainer) {
     });
     }
 });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Solo animar una vez
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.35
+});
+
+document.querySelectorAll('.tarjetas, .formulario-contacto, .quienes_somos-container, .testimonios-container')
+  .forEach(el => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
